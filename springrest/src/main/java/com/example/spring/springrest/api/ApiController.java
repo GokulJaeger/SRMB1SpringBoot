@@ -1,6 +1,4 @@
 package com.example.spring.springrest.api;
-
-import java.util.Arrays;
 import java.util.List;
 
 import com.example.spring.springrest.services.PerishableGoods;
