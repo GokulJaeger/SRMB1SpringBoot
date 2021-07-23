@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<!-- Dependency Injection -->
+    <bean id="c1" class="com.org.spring.Car" scope="singleton" autowire="byType">
+        <constructor-arg index="0" value="Gokul"></constructor-arg>
+        <property name="cname" value="Audi"></property>
+        <property name="cid" value="534623"></property>
+        <property name="cmodel" value="A8L"></property>
+        <property name="cprice" value="12254000.500"></property>
+        <!--  <property name="carStutus" ref="carstatus"></property>-->
+    </bean>
+    <bean id="carstatus" class="com.org.spring.CarDelivery" scope="singleton">
+        <constructor-arg value="Sachin"></constructor-arg>
+        <property name="cstatus" value="Pending"></property>
+        <property name="cstats">
+        <list>
+        <value>8 AirBags</value>
+        <value>Dual Clutch</value>
+        <value>AutomaticTransmission</value>
+        <value>4 Wheel Drive</value>
+        </list>
+        </property>
+    </bean>
+</beans>

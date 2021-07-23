@@ -1,0 +1,7 @@
+mvn archetype:generate -DgroupId=com.org.web -DartifactId=myweb -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+
+<properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+</properties>
