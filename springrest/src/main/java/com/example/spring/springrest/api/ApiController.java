@@ -25,7 +25,7 @@ public class ApiController extends BaseController {
     @GetMapping(value = "/names/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<String>> getNamesId(@PathVariable int id) {
         System.out.println(id);
-        if (id % 2 == 0) {
+        if (id /0 == 0) {
             return new ResponseEntity<List<String>>(pgservice.getPGoods(), HttpStatus.OK);
         } else {
             return new ResponseEntity<List<String>>(pgservice.getPGoods(), HttpStatus.BAD_REQUEST);
