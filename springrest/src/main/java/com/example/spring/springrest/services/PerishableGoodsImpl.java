@@ -11,6 +11,5 @@ public class PerishableGoodsImpl implements PerishableGoods {
     @Override
     public List<String> getPGoods() {
         return Arrays.asList("Apple","Banana","Grapes","Kiwi", "Lemon","Mango");
-    }
-    
+    }  
 }

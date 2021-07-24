@@ -11,10 +11,11 @@ public class CarImpl {
 
         //Spring IOC
         Car ca = (Car) context.getBean("c1");
+        System.out.println("========================================================================================\n");
 
         System.out.println("=====Init=====\n" + ca);
          
-        System.out.println("=====Features=====\n" + ca.getCarStutus().getCstats().toString());
+        System.out.println("=====(Collections)Features:=====\n" + ca.getCarStutus().getCstats().toString());
         
         //Spring Dependency Injection
         System.out.println("=====Delivery Status=====\n" + ca.getCarStutus().getCstatus());
@@ -24,5 +25,26 @@ public class CarImpl {
         // Car cc = (Car) context.getBean("car");
 
         // System.out.println("=====Init=====\n" + cc);
+        
+        System.out.println("========================================================================================\n");
+        
+        System.out.println("Prototype\n");
+        Employee empA = (Employee)context.getBean("empl");
+    	empA.setFname("Employee Gokul");
+    	System.out.println("Message : " + empA.getFname());
+    	
+    	//retrieve it again
+    	Employee empB = (Employee)context.getBean("empl");
+    	System.out.println("Message : " + empB.getFname());
+    	
+    	System.out.println("========================================================================================\n");
+    	System.out.println("SingleTon\n");
+    	Student stA = (Student)context.getBean("stud");
+    	stA.setSname("Student Gokul");
+    	System.out.println("Message : " + stA.getSname());
+    	
+    	//retrieve it again
+    	Student stB = (Student)context.getBean("stud");
+    	System.out.println("Message : " + stB.getSname());
     }
 }
